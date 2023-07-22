@@ -21,11 +21,11 @@ const ProductComponent = () => {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4 uppercase text-center py-3 text-sky-600">OUR PRODUCTS</h1>
-      <div className="grid gap-4 grid-cols-1">
+      <div className="grid gap-4 grid-cols-1 ">
         {products.map((product) => (
           <div
             key={product.id}
-            className="bg-white shadow-md rounded p-4 flex flex-col justify-between"
+            className="bg-white shadow-xl border rounded-xl p-4 flex flex-col justify-between"
           >
             <div>
               <img className='w-32 h-32 object-contain mb-4' src={product.image} alt={product.title} />
@@ -33,7 +33,7 @@ const ProductComponent = () => {
               <p className="text-gray-400 mb-4 hidden sm:block">{product.description}</p>
             </div>
             <div className="flex justify-between items-center">
-              <span className="text-white rounded-tr-full font-bold border px-4 bg-sky-600">₹ {product.price}</span>
+              <span className="text-white rounded-br-2xl rounded-tl-2xl shadow-inner font-bold border py-2 px-4 bg-sky-600">₹ {product.price}</span>
               <button className="bg-blue-900 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline">
                 Add to Cart
               </button>
