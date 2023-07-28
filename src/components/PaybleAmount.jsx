@@ -2,13 +2,14 @@ import React from 'react';
 
 const PaybleAmount = () => {
   // Sample data for demonstration purposes
-  const subtotal = 1000;
-  const tax = 100;
-  const shipping = 50;
-  const total = subtotal + tax + shipping;
+  let subtotal = 1000;
+  let tax = 100;
+  let shipping = 50;
+  let total = subtotal + tax + shipping;
 
   return (
-    <div className="p-4 bg-white">
+    <div className="p-4 bg-white h-full w-full mt-5">
+      
       <h2 className="text-xl font-bold mb-4">Payment Summary</h2>
       <div className="flex justify-between mb-2">
         <span>Subtotal</span>

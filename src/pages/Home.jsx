@@ -5,6 +5,9 @@ import {Link } from "react-router-dom";
 const Home = () => {
   return (
     <>
+    <br />
+    <br />
+    <br />
       <div className="relative">
         <img
           src="https://source.unsplash.com/700x600/?computer,login"

@@ -4,13 +4,15 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Cart from "./pages/Cart";
-import ProductList from "./components/ProductList";
+import Card from "./components/Cards";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import NoPage from "./pages/NoPage";
 import DeliveryInformation from "./pages/DeliveryInformation";
+import APIData from "./components/APIData";
 
 export default function App() {
+
   const [cart, setCart] = useState([]);
   const handleClick = (item) => {
     console.log(item);
@@ -40,26 +42,21 @@ export default function App() {
 	}
   return (
     <>
+    {/* <Demo /> */}
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Navbar size={cart.length} />}>
-            <Route
-              path="/Product"
-              element={<ProductList handleClick={handleClick} />}
-            />
-            <Route
-              path="/Cart"
-              element={<Cart cart={cart} setCart={setCart} handleChange={handleChange} />}
-            />
-            <Route index element={<Home />} />
-            <Route path="/About" element={<About />} />
-            <Route path="/Contact" element={<Contact />} />
-            <Route path="*" element={<NoPage />} />
-            <Route path="/DeliveryInformation" element={ <DeliveryInformation/> } />
+            <Route path="/" element={<Navbar size={cart.length} />}>
+              <Route path="/" index element={<Home />} />
+              <Route path="/About" element={<About />} />
+              <Route path="/Product" element={<APIData handleClick={handleClick} />} />
+              <Route path="/card" element={ <Card />} />
+              <Route path="/Cart" element={<Cart cart={cart} setCart={setCart} handleChange={handleChange} />} />
+              <Route path="/DeliveryInformation" element={ <DeliveryInformation/> } />
+              <Route path="/Contact" element={<Contact />} />
+              <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
-      {/* <Contact /> */}
       <Footer />
     </>
   );

@@ -19,11 +19,7 @@ const ProductList = ({ handleClick }) => {
 
   return (
     <div className="container mx-auto p-4">
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      
       <h1 className="text-2xl font-bold mb-4 uppercase text-center py-3 text-sky-600">
         OUR PRODUCTS
       </h1>

@@ -12,7 +12,7 @@ import { Outlet, Link } from "react-router-dom";
 export default function Navibar({ size}) {
   return (
     <>
-      <header className=" fixed w-full bg-white shadow-md">
+      <header className=" fixed w-full z-10 bg-white shadow-md">
         <div className="bg-sky-600 justify-between ">
           <div className="mx-auto flex md:mx-10 items-center justify-between">
             <ul className="flex items-center gap-2 p-2 text-white text-2xl">

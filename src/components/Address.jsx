@@ -27,16 +27,16 @@ const Address = () => {
   };
 
   return (
-    <div class="flex flex-col p-4 bg-white">
+    <div class="flex flex-col bg-white  w-full h-full mt-5">
       <div class="text-lg font-semibold">
-        <h1>Delivery Address</h1>
+        <h1 className=" ml-5">Delivery Address</h1>
       </div>
       <div className=" rounded-2xl mb-5">
-        <form onSubmit={handleSubmit} className="w-full px-5">
+        <form onSubmit={handleSubmit} className="w-full text-sky-600 px-5">
 
-          <div className="flex flex-col md:flex-row gap-5">
-            <div className="w-1/2 py-4">
-              <label className="block font-bold mb-2" htmlFor="fullName">
+          <div className="flex flex-col md:flex-row gap-2">
+            <div className=" w-full p-2">
+              <label className="block font-bold mb-1" htmlFor="fullName">
                 Full Name
               </label>
               <input
@@ -46,13 +46,13 @@ const Address = () => {
                 value={address.fullName}
                 onChange={handleChange}
                 placeholder="Please enter your name"
-                className="appearance-none text-sm border-b-2 border-sky-600 w-full py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none text-sm border-y-2 border-sky-600 w-full p-2 rounded-md text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
             </div>
 
-            <div className="w-1/2 py-4">
-              <label className="block font-bold mb-2" htmlFor="email">
+            <div className="w-full p-2">
+              <label className="block font-bold mb-1" htmlFor="email">
                 E-mail
               </label>
               <input
@@ -62,15 +62,16 @@ const Address = () => {
                 value={address.email}
                 onChange={handleChange}
                 placeholder="Please enter your email ...."
-                className="appearance-none text-sm border-b-2 border-sky-600 w-full py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none text-sm border-y-2 border-sky-600 w-full rounded-md p-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                
                 required
               />
             </div>
           </div>
 
-          <div class="flex flex-col md:flex-row gap-5 ">
-            <div className="w-1/2 py-4">
-              <label className="block font-bold mb-2" htmlFor="phoneNumber">
+          <div className="flex flex-col md:flex-row gap-2 ">
+            <div className="w-full p-2">
+              <label className="block font-bold mb-1" htmlFor="phoneNumber">
                 Phone Number
               </label>
               <input
@@ -80,12 +81,12 @@ const Address = () => {
                value={address.phoneNumber}
                onChange={handleChange}
                 placeholder="Please enter mobile number"
-                className="appearance-none text-sm border-b-2 border-sky-600 w-full py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none text-sm border-y-2 border-sky-600 w-full rounded-md p-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
             </div>
-            <div className="w-1/2 py-4">
-              <label className="block font-bold mb-2" htmlFor="pinCode">
+            <div className="w-full p-2">
+              <label className="block font-bold mb-1" htmlFor="pinCode">
                 PIN Code
               </label>
               <input
@@ -95,15 +96,15 @@ const Address = () => {
                 value={address.pinCode}
                 onChange={handleChange}
                 placeholder="Please postal Code"
-                className="appearance-none text-sm border-b-2 border-sky-600 w-full py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none text-sm border-y-2 border-sky-600 w-full rounded-md p-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
             </div>
           </div>
 
-          <div class="flex flex-col md:flex-row gap-5 ">
-            <div className="w-1/2 py-4">
-              <label className="block font-bold mb-2" htmlFor="street">
+          <div class="flex flex-col md:flex-row gap-2 ">
+            <div className="w-full p-2">
+              <label className="block font-bold mb-1" htmlFor="street">
                 Street
               </label>
               <input
@@ -113,12 +114,12 @@ const Address = () => {
                 value={address.street}
                 onChange={handleChange}
                 placeholder="street address"
-                className="appearance-none text-sm border-b-2 border-sky-600 w-full py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none text-sm border-y-2 border-sky-600 w-full rounded-md p-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
             </div>
-            <div className="w-1/2 py-4">
-              <label className="block font-bold mb-2" htmlFor="landmark">
+            <div className="w-full p-2">
+              <label className="block font-bold mb-1" htmlFor="landmark">
                 Landmark
               </label>
               <input
@@ -128,15 +129,15 @@ const Address = () => {
                 value={address.landmark}
                 onChange={handleChange}
                 placeholder="landmark"
-                className="appearance-none text-sm border-b-2 border-sky-600 w-full py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none text-sm border-y-2 border-sky-600 w-full rounded-md p-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
             </div>
           </div>
           
-          <div class="flex flex-col md:flex-row gap-5 ">
-            <div className="w-1/2 py-4">
-              <label className="block font-bold mb-2" htmlFor="city">
+          <div class="flex flex-col md:flex-row gap-2 ">
+            <div className="w-full p-2">
+              <label className="block font-bold mb-1" htmlFor="city">
                 City
               </label>
               <input
@@ -146,12 +147,12 @@ const Address = () => {
                 value={address.city}
                 onChange={handleChange}
                 placeholder="Please enter city"
-                className="appearance-none text-sm border-b-2 border-sky-600 w-full py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none text-sm border-y-2 border-sky-600 w-full rounded-md p-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
             </div>
-            <div className="w-1/2 py-4">
-              <label className="block font-bold mb-2" htmlFor="state">
+            <div className="w-full p-2">
+              <label className="block font-bold mb-1" htmlFor="state">
                 State
               </label>
               <input
@@ -161,16 +162,16 @@ const Address = () => {
                value={address.state}
                onChange={handleChange}
                 placeholder="Please enter state"
-                className="appearance-none text-sm border-b-2 border-sky-600 w-full py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none text-sm border-y-2 border-sky-600 w-full rounded-md p-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
             </div>
           </div>
           
 
-          <div className="flex justify-content-center py-4">
+          <div className="flex justify-center py-4">
             <button
-              className="bg-sky-500 text-lg hover:bg-sky-700 text-white font-bold py-3 w-full rounded focus:outline-none focus:shadow-outline"
+              className="bg-sky-500 text-lg hover:bg-sky-700 text-white font-bold py-3 w-1/3 rounded focus:outline-none focus:shadow-outline"
               type="submit"
             
             >

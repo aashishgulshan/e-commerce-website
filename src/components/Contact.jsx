@@ -6,6 +6,11 @@ import map from "../assets/map.png"
 const Contact = () => {
   return (
     <div className="bg-gray-50 p-4">
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <div className="container mx-auto">
         <h2 className="text-3xl text-center font-bold uppercase text-sky-600 my-5">Contact Us</h2>
         <p className='text-center mb-5'>Let our years of expertise help you get back on track.</p>

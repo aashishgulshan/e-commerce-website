@@ -2,9 +2,16 @@ import React from "react";
 
 const About = () => {
   return (
+    <>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <div className="flex justify-center items-center">
       <div className="flex flex-col justify-center items-center max-w-7xl ">
-        <h1 className="text-3xl md:text-[50px] text-gray-700 font-bold mt-5 ">
+        <h1 className="text-3xl md:text-[50px] text-sky-600 font-bold mt-5 ">
           About Us
         </h1>
         <div className="flex flex-col justify-center items-center xl:flex-row m-8 w-[80%] lg:w-full">
@@ -104,6 +111,8 @@ const About = () => {
         </div>
       </div>
     </div>
+    </>
+    
   );
 };
 
