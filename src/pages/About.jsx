@@ -4,6 +4,11 @@ const About = () => {
   return (
     <>
     <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <div className="flex justify-center items-center">
       <div className="flex flex-col justify-center items-center max-w-7xl ">
         <h1 className="text-3xl md:text-[50px] text-sky-600 font-bold mt-5 ">
