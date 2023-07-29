@@ -46,7 +46,7 @@ const Address = () => {
                 value={address.fullName}
                 onChange={handleChange}
                 placeholder="Please enter your name"
-                className="appearance-none text-sm border-y-2 border-sky-600 w-full p-2 rounded-md text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none text-sm border-2 border-sky-600 w-full p-2 rounded-md text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
             </div>
@@ -62,7 +62,7 @@ const Address = () => {
                 value={address.email}
                 onChange={handleChange}
                 placeholder="Please enter your email ...."
-                className="appearance-none text-sm border-y-2 border-sky-600 w-full rounded-md p-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none text-sm border-2 border-sky-600 w-full rounded-md p-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 
                 required
               />
@@ -81,7 +81,7 @@ const Address = () => {
                value={address.phoneNumber}
                onChange={handleChange}
                 placeholder="Please enter mobile number"
-                className="appearance-none text-sm border-y-2 border-sky-600 w-full rounded-md p-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none text-sm border-2 border-sky-600 w-full rounded-md p-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
             </div>
@@ -90,13 +90,13 @@ const Address = () => {
                 PIN Code
               </label>
               <input
-                type="text"
+                type="number"
                 id="pinCode"
                 name="pinCode"
                 value={address.pinCode}
                 onChange={handleChange}
                 placeholder="Please postal Code"
-                className="appearance-none text-sm border-y-2 border-sky-600 w-full rounded-md p-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none text-sm border-2 border-sky-600 w-full rounded-md p-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
             </div>
@@ -114,7 +114,7 @@ const Address = () => {
                 value={address.street}
                 onChange={handleChange}
                 placeholder="street address"
-                className="appearance-none text-sm border-y-2 border-sky-600 w-full rounded-md p-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none text-sm border-2 border-sky-600 w-full rounded-md p-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
             </div>
@@ -129,7 +129,7 @@ const Address = () => {
                 value={address.landmark}
                 onChange={handleChange}
                 placeholder="landmark"
-                className="appearance-none text-sm border-y-2 border-sky-600 w-full rounded-md p-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none text-sm border-2 border-sky-600 w-full rounded-md p-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
             </div>
@@ -147,7 +147,7 @@ const Address = () => {
                 value={address.city}
                 onChange={handleChange}
                 placeholder="Please enter city"
-                className="appearance-none text-sm border-y-2 border-sky-600 w-full rounded-md p-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none text-sm border-2 border-sky-600 w-full rounded-md p-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
             </div>
@@ -162,7 +162,7 @@ const Address = () => {
                value={address.state}
                onChange={handleChange}
                 placeholder="Please enter state"
-                className="appearance-none text-sm border-y-2 border-sky-600 w-full rounded-md p-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none text-sm border-2 border-sky-600 w-full rounded-md p-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
             </div>
@@ -171,7 +171,7 @@ const Address = () => {
 
           <div className="flex justify-center py-4">
             <button
-              className="bg-sky-500 text-lg hover:bg-sky-700 text-white font-bold py-3 w-1/3 rounded focus:outline-none focus:shadow-outline"
+              className="bg-gradient-to-r from-blue-900 to-sky-600 text-lg text-white font-bold py-3 w-1/3 text-center rounded focus:outline-none focus:shadow-outline"
               type="submit"
             
             >

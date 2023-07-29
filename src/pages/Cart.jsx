@@ -3,15 +3,16 @@ import PaybleAmount from "../components/PaybleAmount";
 import { Link } from "react-router-dom";
 import { LuTrash } from "react-icons/lu";
 
-const Cart = ({ cart, setCart, handleChange }) => {
+const Cart = ({ cart, setCart }) => {
+  // logic for set quantity of product
 
-  // logic for set quantity
-
-  // const[amount, setAmount] = useState(1);
-  // const handleAmount = () => {
-  //   let amt = 1;
-
-  // }
+  const [quantity, setQuantity] = useState(1);
+  function decrementQuantity() {
+    setQuantity((preQuantity) => preQuantity - 1);
+  }
+  function incrementQuantity() {
+    setQuantity((preQuantity) => preQuantity + 1);
+  }
 
   const [price, setPrice] = useState(0);
   const handlePrice = () => {
@@ -64,21 +65,13 @@ const Cart = ({ cart, setCart, handleChange }) => {
                 </td>
                 <td className="px-4 py-2">
                   <div className="flex justify-around px-2 rounded-xl shadow-lg font-bold bg-slate-50">
-                    <button
-                      className="p-1"
-                      onClick={() => handleChange(item, +1)}
-                    >
-                      +
+                    <button className="p-1" onClick={decrementQuantity}>
+                      -
                     </button>
 
-                    {/* need to change the quantity of business logic */}
-
-                    <p className="p-1">{item.id}</p>
-                    <button
-                      className="p-1"
-                      onClick={() => handleChange(item, -1)}
-                    >
-                      -
+                    <p className="p-1">{quantity}</p>
+                    <button className="p-1" onClick={incrementQuantity}>
+                      +
                     </button>
                   </div>
                 </td>
@@ -102,7 +95,10 @@ const Cart = ({ cart, setCart, handleChange }) => {
         <hr />
         <PaybleAmount setPrice={price} />
         <div className="flex justify-around my-4">
-          <Link to="/DeliveryInformation" className="bg-gradient-to-r from-blue-900 to-sky-600 py-2 px-10 rounded-lg text-white font-bold">
+          <Link
+            to="/DeliveryInformation"
+            className="bg-gradient-to-r from-blue-900 to-sky-600 text-lg text-white font-bold py-3 w-1/4 text-center rounded focus:outline-none focus:shadow-outline"
+          >
             Next
           </Link>
         </div>

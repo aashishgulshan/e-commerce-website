@@ -12,7 +12,6 @@ import DeliveryInformation from "./pages/DeliveryInformation";
 import APIData from "./components/APIData";
 
 export default function App() {
-
   const [cart, setCart] = useState([]);
   const handleClick = (item) => {
     console.log(item);
@@ -26,34 +25,31 @@ export default function App() {
     setCart([...cart, item]);
   };
 
-  const handleChange = (item, d) =>{
+  const handleChange = (item, d) => {
     // console.log(item, d);
-		let ind = -1;
-		cart.forEach((data, index)=>{
-			if (data.id === item.id)
-				ind = index;
-		});
-		const tempArr = cart;
-		tempArr[ind].id += d;
-		
-		if (tempArr[ind].id === 0)
-			tempArr[ind].id = 1;
-		setCart([...tempArr])
-	}
+    let ind = -1;
+    cart.forEach((data, index) => {
+      if (data.id === item.id) ind = index;
+    });
+    const tempArr = cart;
+    tempArr[ind].id += d;
+
+    if (tempArr[ind].id === 0) tempArr[ind].id = 1;
+    setCart([...tempArr]);
+  };
   return (
     <>
-    {/* <Demo /> */}
       <BrowserRouter>
         <Routes>
-            <Route path="/" element={<Navbar size={cart.length} />}>
-              <Route path="/" index element={<Home />} />
-              <Route path="/About" element={<About />} />
-              <Route path="/Product" element={<APIData handleClick={handleClick} />} />
-              <Route path="/card" element={ <Card />} />
-              <Route path="/Cart" element={<Cart cart={cart} setCart={setCart} handleChange={handleChange} />} />
-              <Route path="/DeliveryInformation" element={ <DeliveryInformation/> } />
-              <Route path="/Contact" element={<Contact />} />
-              <Route path="*" element={<NoPage />} />
+          <Route path="/" element={<Navbar size={cart.length} />}>
+            <Route path="/" index element={<Home />} />
+            <Route path="/About" element={<About />} />
+            <Route path="/Product" element={<APIData handleClick={handleClick} />} />
+            <Route path="/card" element={<Card />} />
+            <Route path="/Cart" element={ <Cart cart={cart} setCart={setCart} handleChange={handleChange}/>}/>
+            <Route path="/DeliveryInformation" element={<DeliveryInformation />} />
+            <Route path="/Contact" element={<Contact />} />
+            <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
