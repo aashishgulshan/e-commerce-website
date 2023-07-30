@@ -3,10 +3,15 @@ import PaybleAmount from "../components/PaybleAmount";
 import { Link } from "react-router-dom";
 import { LuTrash } from "react-icons/lu";
 
-const Cart = ({ cart, setCart }) => {
+const CartList = ({ cart, setCart }) => {
+  const [CART, setCART] = useState([])
+  useEffect(() => {
+    setCART(cart)
+  }, [cart])
+
   // logic for set quantity of product
 
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(0);
   function decrementQuantity() {
     setQuantity((preQuantity) => preQuantity - 1);
   }
@@ -17,7 +22,7 @@ const Cart = ({ cart, setCart }) => {
   const [price, setPrice] = useState(0);
   const handlePrice = () => {
     let ans = 0;
-    cart.map((item) => (ans += item.price * item.id));
+    CART.map((item) => (ans += item.product_price * item.quantity));
     setPrice(ans);
   };
   const handleRemove = (id) => {
@@ -25,7 +30,6 @@ const Cart = ({ cart, setCart }) => {
     setCart(arr);
     // handlePrice();
   };
-
   useEffect(() => {
     handlePrice();
   });
@@ -51,17 +55,17 @@ const Cart = ({ cart, setCart }) => {
           </thead>
 
           <tbody>
-            {cart.map((item) => (
-              <tr key={item.id}>
-                <td className="px-4 py-2">1</td>
+            {CART?.map((cartItem, cartindex) => (
+              <tr key={cartItem.id}>
+                <td className="px-4 py-2">{cartindex+1}</td>
                 <td className="px-4 py-2">
-                  <img className="h-20" src={item.image} alt={item.title} />
+                  <img className="h-20" src={cartItem.product_primary_image.image} alt={cartItem.product_name} />
                 </td>
                 <td className="text-center px-4 py-2">
-                  <p>{item.title}</p>
+                  <p>{cartItem.product_name}</p>
                 </td>
                 <td className=" text-center px-4 py-2">
-                  <span>₹ {item.price}</span>
+                  <span>₹ {cartItem.product_price * cartItem.quantity}</span>
                 </td>
                 <td className="px-4 py-2">
                   <div className="flex justify-around px-2 rounded-xl shadow-lg font-bold bg-slate-50">
@@ -69,7 +73,7 @@ const Cart = ({ cart, setCart }) => {
                       -
                     </button>
 
-                    <p className="p-1">{quantity}</p>
+                    <p className="p-1">{cartItem.quantity}</p>
                     <button className="p-1" onClick={incrementQuantity}>
                       +
                     </button>
@@ -77,7 +81,7 @@ const Cart = ({ cart, setCart }) => {
                 </td>
                 <td className="text-center py-2">
                   <button
-                    onClick={() => handleRemove(item.id)}
+                    onClick={() => handleRemove(cartItem.id)}
                     className="p-2 ring-2 text-red-600 ring-red-600 rounded-full hover:text-white hover:bg-red-600"
                   >
                     <LuTrash />
@@ -87,9 +91,8 @@ const Cart = ({ cart, setCart }) => {
             ))}
           </tbody>
         </table>
-
         {/* <div className="bg-sky-600 p-5 text-white font-bold">
-          <span>Total Cart Price </span>
+          <span>Total Price </span>
           <span> Rs - {price}</span>
         </div> */}
         <hr />
@@ -99,11 +102,11 @@ const Cart = ({ cart, setCart }) => {
             to="/DeliveryInformation"
             className="bg-gradient-to-r from-blue-900 to-sky-600 text-lg text-white font-bold py-3 w-1/4 text-center rounded focus:outline-none focus:shadow-outline"
           >
-            Next
+            Check Out
           </Link>
         </div>
       </div>
     </>
   );
 };
-export default Cart;
+export default CartList;

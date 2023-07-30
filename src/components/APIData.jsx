@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Loader from "./Loader";
-function APIData({ handleClick }) {
+function APIData({ addToCart }) {
   const [data, setData] = useState(null);
-  const [addRemove, setAddRemove] = useState(false);
-  function addToCartClick() {
-    setAddRemove(!addRemove);
-  }
-
+  
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
@@ -71,7 +67,7 @@ function APIData({ handleClick }) {
                   Rs. {product.product_price}
                 </h3>
                 <button
-                  onClick={() => handleClick(product)}
+                  onClick={() => addToCart(product)}
                   className=" border-2 px-4 py-1  border-sky-500 rounded-md text-sky-500 text-sm"
                 >
                   Add To Cart

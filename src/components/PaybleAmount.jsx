@@ -1,8 +1,9 @@
 import React from 'react';
 
-const PaybleAmount = () => {
+const PaybleAmount = ({price}) => {
+  console.log(price);
   // Sample data for demonstration purposes
-  let subtotal = 1000;
+  let subtotal = 500;
   let tax = 100;
   let shipping = 50;
   let total = subtotal + tax + shipping;
