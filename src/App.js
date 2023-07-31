@@ -12,28 +12,28 @@ import DeliveryInformation from "./pages/DeliveryInformation";
 import APIData from "./components/APIData";
 
 export default function App() {
-  // const [warning, setWarning] = useState(false);
+  const [warning, setWarning] = useState(false);
   const [cart, setCart] = useState([]);
   // console.log(cart);
-  const addToCart = (data) => {
-    let isPresent = false;
-    cart.forEach((product)=>{
-      if(data.id === product.id)
-      isPresent = true;
-    })
-    if(isPresent){
-      // setWarning(true);
-      // setTimeout( () =>{
-      //   setWarning(false);
-      // }, 2000);
-      return;
-    }
-    setCart([...cart,{...data,quantity: 1}])
-  };
-
   // const addToCart = (data) => {
+  //   let isPresent = false;
+  //   cart.map((product)=>{
+  //     if(data.id === product.id)
+  //     isPresent = true;
+  //   })
+  //   if(isPresent){
+  //     setWarning(true);
+  //     setTimeout( () =>{
+  //       setWarning(false);
+  //     }, 2000);
+  //     return;
+  //   }
   //   setCart([...cart,{...data,quantity: 1}])
   // };
+
+  const addToCart = (data) => {
+    setCart([...cart,{...data,quantity: 1}])
+  };
 
   // const handleChange = (item, d) => {
   //   // console.log(item, d);
@@ -49,9 +49,9 @@ export default function App() {
   // };
   return (
     <>
-    {/* {
+    {
       warning && <div className=""> Item is Already added to cart</div>
-    } */}
+    }
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Navbar size={cart.length} />}>

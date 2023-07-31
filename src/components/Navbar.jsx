@@ -58,7 +58,7 @@ export default function Navibar({ size}) {
             </Link>
           </div>
           
-          <div className="text-lg lg:flex lg:flex-1 lg:justify-end gap-5">
+          <div className="text-lg md:flex lg:flex-1 lg:justify-end gap-5">
             <Link
               to="/About"
               className=" hidden md:block font-semibold text-sky-600 py-2 px-4 rounded leading-6 hover:bg-gray-100"

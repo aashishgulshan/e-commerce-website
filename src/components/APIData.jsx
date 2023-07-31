@@ -34,7 +34,7 @@ function APIData({ addToCart }) {
       <br />
       <br />
       <br />
-      <div className="container mx-auto">
+      <div className="container mx-auto px-5">
         <h1 className="text-3xl font-bold mb-4 uppercase text-center py-3 text-sky-600">
           OUR PRODUCTS
         </h1>
@@ -52,16 +52,13 @@ function APIData({ addToCart }) {
                 />
               </div>
 
-              <div className="w-1/2 flex-col">
+              <Link to="/card" className="w-1/2 flex-col">
                 <h2 className="font-bold capitalize">{product.product_name}</h2>
                 <p className=" font-semibold text-sm text-sky-500">Available</p>
-                <p className=" truncate">{product.product_description}</p>
-                <Link to="/Card">
-                  <button className=" text-gray-500 hover:text-gray-400">
-                    Read More...
-                  </button>{" "}
-                </Link>
-              </div>
+                <p className="hidden sm:block truncate">{product.product_description}</p>
+                <p className="hidden sm:block text-gray-500 hover:text-gray-400">Read More...</p>
+                
+              </Link>
               <div className="w-1/4 mx-auto flex-col justify-center text-center">
                 <h3 className="font-semibold mb-4">
                   Rs. {product.product_price}
