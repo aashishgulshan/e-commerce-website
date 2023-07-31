@@ -143,7 +143,7 @@ const Footer = () => {
               </button>
             </div>
           </div>
-          <div className="md:flex bg-sky-600 p-3 flex-col text-center pt-5 space-y-8 md:flex-row md:justify-between md:space-y-0">
+          <div className="md:flex rounded-lg bg-sky-600 p-3 flex-col text-center pt-5 space-y-8 md:flex-row md:justify-between md:space-y-0">
             <div className="flex mx-3 justify-between space-x-20 md:flex-row text-gray-200 md:space-x-28 md:ml-20 lg:ml-24 lg:space-x-[13rem] xl:space-x-72 xl:ml-24">
               <p>
                 @ Copyright <strong>Company.</strong>All Rights Reserved
@@ -155,31 +155,31 @@ const Footer = () => {
             <div className="text-white pb-4 text-center text-xl space-x-2 md:w-2/4 md:pb-0 md:pl-2 md:space-x-1 lg:pl-[171px] lg:space-x-2 xl:pl-44">
               <a
                 href="#"
-                className="w-8 h-8 bg-orange-500 hover:text-orange-500 inline-block rounded-full pt-[3px] hover:bg-gray-200"
+                className="w-8 h-8 bg-sky-600 hover:text-red-500 inline-block rounded-full pt-[3px] hover:bg-gray-200"
               >
                 <FaYoutube className="m-1"></FaYoutube>
               </a>{" "}
               <a
                 href="#"
-                className="w-8 h-8 bg-orange-500 hover:text-orange-500 inline-block rounded-full pt-[3px] hover:bg-gray-200"
+                className="w-8 h-8 bg-sky-600 bg-gradient-to-r hover:from-pink-500 hover:to-yellow-500 inline-block rounded-full pt-[3px]"
               >
                 <FaInstagram className="m-1"></FaInstagram>
               </a>{" "}
               <a
                 href="#"
-                className="w-8 h-8 bg-orange-500 hover:text-orange-500 inline-block rounded-full pt-[3px] hover:bg-gray-200"
+                className="w-8 h-8 hover:text-blue-500 inline-block rounded-full pt-[3px] hover:bg-gray-200"
               >
             <FaFacebook className="m-1"></FaFacebook> 
               </a>{" "}
               <a
                 href="#"
-                className="w-8 h-8 bg-orange-500 hover:text-orange-500 inline-block rounded-full pt-[3px] hover:bg-gray-200"
+                className="w-8 h-8 hover:text-green-600 inline-block rounded-full pt-[3px] hover:bg-gray-200"
               >
               <FaWhatsapp className="m-1"></FaWhatsapp>
               </a>{" "}
               <a
                 href="#"
-                className="w-8 h-8  bg-orange-500 hover:text-orange-500 inline-block rounded-full pt-[3px] hover:bg-gray-200"
+                className="w-8 h-8  hover:text-blue-600 inline-block rounded-full pt-[3px] hover:bg-gray-200"
               >
                 <FaLinkedin className="m-1"></FaLinkedin> 
               </a>{" "}
