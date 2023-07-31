@@ -143,7 +143,7 @@ const Footer = () => {
               </button>
             </div>
           </div>
-          <div className="md:flex hidden bg-sky-600 p-3 flex-col text-center pt-5 space-y-8 md:flex-row md:justify-between md:space-y-0">
+          <div className="md:flex bg-sky-600 p-3 flex-col text-center pt-5 space-y-8 md:flex-row md:justify-between md:space-y-0">
             <div className="flex mx-3 justify-between space-x-20 md:flex-row text-gray-200 md:space-x-28 md:ml-20 lg:ml-24 lg:space-x-[13rem] xl:space-x-72 xl:ml-24">
               <p>
                 @ Copyright <strong>Company.</strong>All Rights Reserved
@@ -157,19 +157,19 @@ const Footer = () => {
                 href="#"
                 className="w-8 h-8 bg-orange-500 hover:text-orange-500 inline-block rounded-full pt-[3px] hover:bg-gray-200"
               >
-                <i className="fa fa-twitter"><FaYoutube className="m-1"></FaYoutube> </i>
+                <FaYoutube className="m-1"></FaYoutube>
               </a>{" "}
               <a
                 href="#"
                 className="w-8 h-8 bg-orange-500 hover:text-orange-500 inline-block rounded-full pt-[3px] hover:bg-gray-200"
               >
-                <i className="fa fa-instagram"><FaInstagram className="m-1"></FaInstagram> </i>
+                <FaInstagram className="m-1"></FaInstagram>
               </a>{" "}
               <a
                 href="#"
                 className="w-8 h-8 bg-orange-500 hover:text-orange-500 inline-block rounded-full pt-[3px] hover:bg-gray-200"
               >
-                <i className="fa fa-facebook"><FaFacebook className="m-1"></FaFacebook> </i>
+            <FaFacebook className="m-1"></FaFacebook> 
               </a>{" "}
               <a
                 href="#"
@@ -181,7 +181,7 @@ const Footer = () => {
                 href="#"
                 className="w-8 h-8  bg-orange-500 hover:text-orange-500 inline-block rounded-full pt-[3px] hover:bg-gray-200"
               >
-                <i className="fa fa-linkedin"><FaLinkedin className="m-1"></FaLinkedin> </i>
+                <FaLinkedin className="m-1"></FaLinkedin> 
               </a>{" "}
             </div>
           </div>
